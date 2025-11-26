@@ -9,7 +9,7 @@ try:
 
 
 # TESTING GITHUB commit and push to cloud server
-
+# testing from GitHub to clone
 
     # potion_sound = [pygame.mixer.Sound("potion-sound.wav")]
     bg_sound = pygame.mixer.music.load("Big-Day-Out.mp3")
@@ -238,4 +238,5 @@ while True:
 # snd.quitScript()
 print("Quitting...")
 sys.exit(0)
+
 quit()
