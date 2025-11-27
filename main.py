@@ -6,16 +6,10 @@ pygame.mixer.pre_init(44100, -16, 2, 2048) # setup mixer to avoid sound lag
 
 try:
     potion_sound = pygame.mixer.Sound("potion-sound.wav")
+    sharkdolphin_sound = pygame.mixer.Sound("shark&dolphin.wav")
+    stayhome_sound = pygame.mixer.Sound("stay-home.wav")
+    wentout_sound = pygame.mixer.Sound ("went-out.wav")
 
-
-# TESTING GITHUB commit and push to cloud server
-# testing from GitHub to clone
-# test push again
-# test update again
-#update one more time
-#final test
-
-    # potion_sound = [pygame.mixer.Sound("potion-sound.wav")]
     bg_sound = pygame.mixer.music.load("Big-Day-Out.mp3")
     pygame.mixer.music.play(-1)
 except:
@@ -79,6 +73,7 @@ def start():
 def adventure():
     print("You leave home and adventure into the unknown to find some friends.")
     print("As you swim, you encounter a shark and a dolphin!")
+    sharkdolphin_sound.play()
     print("They look like they are fighting…\n")
     print("You wonder if either one of them would want to be your friend!\n")
     print("You swim over and see whats going on.")
@@ -134,6 +129,7 @@ def neither():
 
 
 def stayHome():
+    stayhome_sound.play()
     print("The ocean is a scary place that you're not ready for! You'd rather stay home where its safe.")
 
     # Go to the sea witch and ask for advice!!!
@@ -180,7 +176,6 @@ def trust():
 
 def eat():
     print("All this thinking is making you hungry.")
-
     print("You decide to eat something, but after the meal you start to feel drowsy and wanna take a nap.")
 
     choice = chooseOption(2)
@@ -198,6 +193,7 @@ def nap():
 
 
 def noNap():
+    wentout_sound.play()
     print("You push through the tiredness and adventure out.")
     print("After swimming for a while, you end up falling asleep!")
     print("You wake up only to find yourself lost after the currents took you somewhere.")
